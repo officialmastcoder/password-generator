@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator by AHK WEB SOLUTIONS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator by AHK WEB SOLUTIONS</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate a Password</h2>
+        </div>
+        <div class="card-body">
+          <input type="text" id="password" placeholder="Generated Password Will Be Shown Here" readonly>
+        </div>
+        <div class="card-footer">
+          <button id="generate" class="btn">Generate Password</button>
+          <input class="btn" type="button" id="copy" onclick="myFunction()" value="Copy Sum">
+        </div>
+      </div>
+    </div>
+    <script src="script.js"defer></script>
+  </body>
+  <script>
+    function myFunction() {
+      /* Get the text field */
+      var copyText = document.getElementById("password");
+    
+      /* Select the text field */
+      copyText.select();
+    //   copyText.setSelectionRange(0, 99999); /* For mobile devices */
+    
+      /* Copy the text inside the text field */
+      navigator.clipboard.writeText(copyText.value);
+      
+      /* Alert the copied text */
+      alert("Copied the Passsword: " + copyText.value);
+    
+}
+  </script>
+</html>
